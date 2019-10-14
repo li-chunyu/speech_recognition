@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import htk_featio as htk
 import speech_sigproc as sp
 
-data_dir = '../Experiments'
-wav_file='../LibriSpeech/dev-clean/1272/128104/1272-128104-0000.flac'
+data_dir = 'exp'
+wav_file='Librispeech/dev-clean-2/1272/135031/1272-135031-0000.flac'
 feat_file=os.path.join(data_dir,'feat/1272-128104-0000.feat')
 plot_output=True
 
@@ -26,6 +26,7 @@ fe = sp.FrontEnd(samp_rate=samp_rate,mean_norm_feat=True)
 
 
 feat = fe.process_utterance(x)
+
 
 if (plot_output):
     if not os.path.exists('fig'):
